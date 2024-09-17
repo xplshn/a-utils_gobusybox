@@ -78,9 +78,9 @@ func run() {
 	}
 	if errors.Is(err, bbmain.ErrNotRegistered) {
 		log.SetFlags(0)
-		log.Printf("Failed to run command: %v", err)
+		log.Printf("%v", err)
 
-		log.Printf("Supported commands are:")
+		log.Printf("\nSupported commands are:")
 		for _, cmd := range bbmain.ListCmds() {
 			log.Printf(" - %s", cmd)
 		}
